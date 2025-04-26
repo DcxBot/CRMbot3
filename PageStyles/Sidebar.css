@@ -1,0 +1,71 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto; /* In case of many links */
+    transition: width 0.3s ease; /* Smooth transition for potential future collapse */
+    border-top-right-radius: 10px;    /* Round the top-right corner */
+    border-bottom-right-radius: 40px; /* Round the bottom-right corner */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li a {
+    display: block;
+    padding: 12px 20px 12px 16px;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide text overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    border-left: 4px solid transparent; /* Default transparent border */
+  }
+  
+  .sidebar li a:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .sidebar li a.active {
+    background-color: var(--hover-bg); /* Use hover background for active */
+    font-weight: 600;
+    color: var(--accent-color); /* Use accent color for text */
+    border-left-color: var(--accent-color); /* Make left border visible */
+  }
+
+  .sidebar li a {
+    position: relative;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    transform-origin: left;
+  }
+  
+  .sidebar li a:hover {
+    background-color: var(--hover-bg);
+    transform: translateX(5px);
+    border-left-color: var(--accent-color);   
+  }
+  
+  .sidebar li a.active {
+    background-color: var(--hover-bg);
+    transform: translateX(5px);
+    border-left-color: var(--accent-color); 
+  }
+
+  
+  
+  /* Responsive sidebar styles */
+  @media (max-width: 768px) {
+    :root { --sidebar-width: 60px; }
+    .sidebar li a { font-size: 0; }
+    .sidebar li a::before { margin-right: 0; }
+  }
+
