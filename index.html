@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
   <title>Home Page</title>
   <link rel="stylesheet" href="/PageStyles/GlobalStyle.css">
   <link rel="stylesheet" href="/PageStyles/Sidebar.css">
@@ -11,6 +11,14 @@
 </head>
 
 <body>
+  <!-- Slideshow Background (NEW) -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('Images/agent 1.jpg');"></div>
+    <div class="slide" style="background-image: url('Images/agent 2.jpg');"></div>
+    <div class="slide" style="background-image: url('Images/agent 3.jpg');"></div>
+    <div class="slide" style="background-image: url('Images/agent 4.jpg');"></div>
+  </div>
+
   <nav class="sidebar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -20,18 +28,44 @@
       <li><a href="LogATicket.html">Log A Ticket</a></li>
     </ul>
   </nav>
+
   <main class="content">
-    <h1>Home Page</h1>
-
     <div class="parent">
-      <div class="div1">1</div>
-      <div class="div2">2</div>
-      <div class="div3">3</div>
-      <div class="div4">4</div>
+      <!-- Floating Card (Replacing div1) -->
+      <div class="floating-card">
+        <div class="card-content active">
+          <h2 class="home-card-title">Step Into the Future of Customer Service with Our Live Call Center Bot</h2>
+          <p class="home-card-subtitle">See our virtual assistant handle realistic customer conversations with fluid, natural responses — showcasing real-time AI in action.</p>
+          <button class="home-stroke-btn" onclick="window.location.href='/CallCentreDemonstration.html'">
+            View
+          </button>          
+        </div>
+        <div class="card-content">
+          <h2 class="home-card-title">Turn Your Voice Into Instant, Actionable Text with Smart Transcription</h2>
+          <p class="home-card-subtitle">Upload or record your own voice notes and get instant, accurate transcriptions — organized and ready to use.</p>
+          <button class="home-stroke-btn" onclick="window.location.href='/TranscribeYourOwnAudio.html'">
+            View
+          </button>   
+        </div>
+        <div class="card-content">
+          <h2 class="home-card-title">Make Data Work for You with Built-In Business Intelligence Dashboards</h2>
+          <p class="home-card-subtitle">Visualize and understand your data through interactive dashboards, uncovering key insights that drive better business decisions.</p>
+          <button class="home-stroke-btn" onclick="window.location.href='/.html'">
+            View
+          </button>   
+        </div>
+        <div class="card-content">
+          <h2 class="home-card-title">Log Issues Effortlessly with a Ticketing Experience That Just Flows</h2>
+          <p class="home-card-subtitle">Report issues or requests through a guided, AI-supported flow — with easy tracking and fast resolution.</p>
+          <button class="home-stroke-btn" onclick="window.location.href='/LogATicket.html'">
+            View
+          </button>   
+        </div>
+      </div>
     </div>
-
   </main>
-  <script src="script.js"></script>
-</body>
 
+  <script src="JavaScripts/HomeScript.js"></script> <!-- Uncommented since we need JS now -->
+  <script src="JavaScripts/script.js"></script>
+</body>
 </html>

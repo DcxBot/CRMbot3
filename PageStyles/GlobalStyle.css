@@ -14,9 +14,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: flex;
   min-height: 100vh;
-  background-color: var(--background-color);
   color: var(--text-color);
-  background: linear-gradient(135deg, #f0f0f0 0%, #b9d9fc 100%);
+  
+  background-color: #a8d2ff; /* fallback */
+
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.884) 0px, rgba(255,255,255,0.884) 1px, transparent 1px, transparent 200px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.884) 0px, rgba(255,255,255,0.884) 1px, transparent 1px, transparent 200px),
+    linear-gradient(135deg, #f0f0f0 0%, #a8d2ff 100%);
 }
 
 .content {
