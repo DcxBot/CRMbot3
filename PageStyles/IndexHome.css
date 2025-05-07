@@ -161,3 +161,30 @@
     background: rgba(255, 255, 255, 0.886);
     transform: translateY(-2px);
   }
+
+
+  /* Slideshow Dots Styles */
+.slideshow-dots {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.slideshow-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-dots .dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}
